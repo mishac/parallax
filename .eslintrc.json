@@ -1,0 +1,44 @@
+{
+  "extends": ["eslint-config-airbnb", "eslint-config-prettier"],
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "drupalTranslations": true,
+    "domready": true,
+    "jQuery": true,
+    "_": true,
+    "matchMedia": true,
+    "Backbone": true,
+    "Modernizr": true,
+    "CKEDITOR": true
+  },
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "jsx-a11y/href-no-hash": [0],
+    "import/extensions": [0],
+    "consistent-return": [0],
+    "no-underscore-dangle": [0],
+    "max-nested-callbacks": [1, 3],
+    "no-plusplus": [1, {
+      "allowForLoopAfterthoughts": true
+    }],
+    "no-param-reassign": [0],
+    "no-prototype-builtins": [0],
+    "valid-jsdoc": [1, {
+      "prefer": {
+        "returns": "return",
+        "property": "prop"
+      },
+      "requireReturn": false
+    }],
+    "no-unused-vars": [1],
+    "prettier/prettier": "error"
+  },
+  "plugins": ["prettier"]
+}
