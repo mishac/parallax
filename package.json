@@ -13,7 +13,7 @@
     "build": "webpack --progress --env.build --mode development --config webpack.config.dev.babel.js",
     "build:prod": "webpack -p --env.prod--mode development  --config webpack.config.prod.babel.js"
   },
-  "main": "webpack.config.prod.babel.js",
+  "main": "./dist/main.js",
   "dependencies": {
     "gsap": "^2.0.1",
     "lodash.throttle": "^4.1.1"
