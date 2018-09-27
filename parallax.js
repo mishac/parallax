@@ -27,7 +27,7 @@ const getScrollPosition = el => {
   return { top: el.scrollTop, left: el.scrollLeft };
 };
 
-class ParallaxController {
+export default class ParallaxController {
   constructor(elements, options) {
     const parallax = this;
     this.elements = Array.from(elements);
@@ -112,5 +112,3 @@ class ParallaxController {
     });
   }
 }
-
-module.exports = ParallaxController;
