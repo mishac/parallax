@@ -30,7 +30,7 @@ const getScrollPosition = el => {
 export default class ParallaxController {
   constructor(elements, options) {
     const parallax = this;
-    this.elements = Array.from(elements);
+    this.elements = Array.isArray(elements) ? elements : [elements];
     this.multiplier = options.multiplier || 0.25;
     this.direction = options.direction || 'up';
     this.breakpoint = options.breakpoint || 1025;
