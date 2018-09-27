@@ -1,6 +1,4 @@
-import TweenLite from 'gsap/TweenLite';
-import 'gsap/CSSPlugin';
-import { Expo } from 'gsap/EasePack';
+import { TweenLite, Expo } from 'gsap';
 import _throttle from 'lodash.throttle';
 
 const getOffset = el => {
