@@ -1,7 +1,7 @@
 {
   "name": "parallax",
   "version": "1.0.0",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "main": "./parallax.js",
   "dependencies": {
     "gsap": "^2.0.1",
