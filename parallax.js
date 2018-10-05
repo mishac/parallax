@@ -83,7 +83,7 @@ export default class ParallaxController {
     const size = getSize(this.container)[
       this.axis === 'y' ? 'height' : 'width'
     ];
-    const middleOfPage = scrollPosition + size / 2;
+    const middleOfPage = scrollPosition - size / 2;
 
     this.elements.forEach((el, index) => {
       const options = this.data.get(this.elements[index]);
