@@ -2,10 +2,19 @@ import { TweenLite, Expo } from 'gsap';
 import _throttle from 'lodash.throttle';
 
 const getOffset = el => {
-  const rect = el.getBoundingClientRect();
+  let top = 0;
+  let left = 0;
+
+  do {
+    top += el.offsetTop;
+    left += el.offsetLeft;
+
+    el = el.offsetParent;
+  } while (el);
+
   return {
-    top: rect.top + document.body.scrollTop,
-    left: rect.left + document.body.scrollLeft,
+    left,
+    top,
   };
 };
 
@@ -14,7 +23,7 @@ const getSize = el => {
     return { width: el.innerWidth, height: el.innerHeight };
   }
 
-  return { width: el.clientWidth, height: el.clientHeight };
+  return { width: el.offsetWidth, height: el.offsetHeight };
 };
 
 const getScrollPosition = el => {
