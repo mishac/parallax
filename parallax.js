@@ -73,13 +73,13 @@ export default class ParallaxController {
     window.addEventListener('load ', () => animate());
     animate();
   }
-  animate(offset = false) {
+  animate() {
     if (!this.mq.matches) {
       return;
     }
-    const scrollPosition =
-      offset ||
-      getScrollPosition(this.container)[this.axis === 'y' ? 'top' : 'left'];
+    const scrollPosition = getScrollPosition(this.container)[
+      this.axis === 'y' ? 'top' : 'left'
+    ];
     const size = getSize(this.container)[
       this.axis === 'y' ? 'height' : 'width'
     ];
