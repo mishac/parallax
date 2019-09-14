@@ -69,6 +69,9 @@ export default class ParallaxController {
       _throttle(() => {
         animate();
       }, 200),
+      {
+        passive: true,
+      },
     );
     window.addEventListener('load ', () => animate());
     animate();
