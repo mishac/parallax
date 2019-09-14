@@ -20,18 +20,30 @@ const getOffset = el => {
 
 const getSize = el => {
   if (el instanceof Window) {
-    return { width: el.innerWidth, height: el.innerHeight };
+    return {
+      width: el.innerWidth,
+      height: el.innerHeight,
+    };
   }
 
-  return { width: el.offsetWidth, height: el.offsetHeight };
+  return {
+    width: el.offsetWidth,
+    height: el.offsetHeight,
+  };
 };
 
 const getScrollPosition = el => {
   if (el instanceof Window) {
-    return { top: el.scrollY, left: el.scrollX };
+    return {
+      top: el.scrollY,
+      left: el.scrollX,
+    };
   }
 
-  return { top: el.scrollTop, left: el.scrollLeft };
+  return {
+    top: el.scrollTop,
+    left: el.scrollLeft,
+  };
 };
 
 export default class ParallaxController {
