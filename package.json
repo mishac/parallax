@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "./parallax.js",
   "dependencies": {
-    "gsap": "^2.0.1",
+    "gsap": "^3.6.0",
     "lodash.throttle": "^4.1.1"
   },
   "devDependencies": {
